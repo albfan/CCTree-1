@@ -27,20 +27,21 @@ Plugin generates dependency-trees for symbols using a cscope database in Vim.
 Basic cross-referencing includes functions and macros. Enhanced symbol
 processing covers macros, typedefs, enums, and global variables.
 
-Requires Cscope and works best with C code.
+Requires Vim 7.xx, Cscope and works best with C code.
 
 ==============================================================================
 2. Downloads~
                                                 *CCTree-download*
 
-You can download the latest release of the script from this url :
+You can download the latest release of the script from this url:
     http://www.vim.org/scripts/script.php?script_id=2368
 
+Or install with a plugin manager (vundle, pathogen) from:
+    https://github.com/hari-rangarajan/CCTree
 
 Cscope packages can be found here:
     http://cscope.sourceforge.net/
     http://code.google.com/p/cscope-win32/
-    
 
 ==============================================================================
 3. Installation~
@@ -451,6 +452,24 @@ to bg.
 8. History~
                                                 *CCTree-history*
 
+Version 1.7: April, 2014
+      Compatibility with plugin managers
+      Added documentation
+      Polish script
+
+Version 1.61: June 10, 2012
+      1. Compability patch for change in tag file format starting
+      from ccglue version 0.6.0
+
+Version 1.60: July 14, 2011
+      1. Speed-up call-tree depth manipulation using incremental
+      updates
+
+Version 1.55: June 20, 2011
+      1. Speed-up syntax highlighting by restricting to visible
+      area (Note: To export to HTML, run TOhtml command on cctree window 
+      copy to get complete highlighted call-tree) 
+
 Version 1.53: June 17, 2011
       1. Bug fix related to appending cscope databases
       2. Bug fix related to loading xref databases
@@ -569,7 +588,6 @@ Version 0.1: August 31,2008
 9. Thanks~
                                                  *CCTree-thanks*
 
-
    Ben Fritz                      (ver 1.53 -- Bug reports on database append/load)
    Qaiser Durrani                 (ver 1.51 -- Reporting issues with SunOS)
    Ben Fritz                      (ver 1.39 -- Suggestion/Testing for 
@@ -581,8 +599,6 @@ Version 0.1: August 31,2008
    Michael Wookey                 (Ver 0.40 -- Testing/bug report/patches)
    Yegappan Lakshmanan            (Ver 0.20 -- Patches)
 
-   The Vim Community, ofcourse :)
-
+   The Vim Community, of course :)
 
 vim:tw=78:fo=tcq2:isk=!-~,^*,^\|,^\":ts=8:ft=help:norl:
-
